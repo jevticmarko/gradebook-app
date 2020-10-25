@@ -1,0 +1,9 @@
+{
+    "scripts": {
+        "cypress": "cypress open"
+    },
+    "dependencies": {
+        "cypress": "^5.4.0",
+        "faker": "^5.1.0"
+    }
+}

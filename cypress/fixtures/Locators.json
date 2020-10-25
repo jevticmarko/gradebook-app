@@ -1,0 +1,83 @@
+{
+    "Header" : {
+        "Signin" : ".nav-item",
+        "Register" : ".nav-link",
+        "myGradebook" : ".nav-link",
+        "createGradebook" : ".nav-link",
+        "Gradebooks" : ".nav-link",
+        "Professors" : ".nav-link",
+        "All_professors" : ".dropdown-item",
+        "Create_professor" : ".dropdown-item"
+    },
+    "Login" : {
+        "Email" : ".form-control",
+        "Password" : ".form-control",
+        "Submit" : ".btn",
+        "Logout" : ".nav-item",
+        "Login_title" : ".form-signin-heading"
+    },
+    "Register" : {
+        "first_name" : "#firstName",
+        "last_name" : "#lastName",
+        "password" : "#password",
+        "password_confirmation" : "#passwordConfirmation",
+        "email" : "#email",
+        "terms" : "#termsAndConditions",
+        "login_button" : ".btn",
+        "alert" : ".command-message-text"
+    },
+    "MyGradebook" : {
+        "myGradebookTitle" : ".h3",
+        "add_student" : ".btn",
+        "student_name" : "#firstName",
+        "student_last_name" : "#lastName",
+        "student_img_button" : ".btn",
+        "student_url" : ".form-control",
+        "table" : ".table",
+        "move_up_button" : ".btn",
+        "move_down_button" : ".btn",
+        "remove_url_button" : ".btn",
+        "submit_student" : ".btn",
+        "delete_gradebook" : ".btn",
+        "edit_gradebook" : ".btn",
+        "select_professor" : "#professor",
+        "alert" : ".alert"
+
+    },
+    "CreateGradebook" : {
+        "create_gradebook" : ".nav-link",
+        "gradebook_title" : "#title",
+        "professor_select" : "#professor",
+        "submit_gradebook" : ".btn",
+        "gradebook_alert" : ".alert"
+    },
+    "Comment" : {
+        "textarea" : ".form-control",
+        "submit_comment" : ".btn",
+        "added_comment" : ".comments",
+        "delete_comment_button" : ".btn",
+        "alertMessage" : ".alert" 
+    },
+    "Professor" : {
+        "professor_title" : ".h3",
+        "professor_name" : "#firstName",
+        "professor_last_name" : "#lastName",
+        "add_image" : ".btn",
+        "professor_img_url" : ".form-control",
+        "remove_img" : ".btn",
+        "move_img_up" : ".btn",
+        "move_img_down" : ".btn",
+        "submit_professor" : ".btn",
+        "professor_search" : ".form-control",
+        "professor_list" : ".table",
+        "alert" : ".alert"
+    },
+    "Filter" : {
+        "gradebook_filter" : ".form-control",
+        "search" : ".btn",
+        "gradebook_list" : ".table",
+        "previous_button" : ".btn",
+        "next_button" : ".btn"
+    }
+    
+}

@@ -1,4 +1,5 @@
 const Locators = require("../fixtures/Locators.json")
+
 describe("Create gradebook", ()=>{
 
     let email = "kalabaster@live.com"
@@ -33,7 +34,7 @@ describe("Create gradebook", ()=>{
         cy.get(Locators.CreateGradebook.submit_gradebook).click()
         cy.get(Locators.CreateGradebook.gradebook_alert).should("contain", "Message: The given data was invalid.")
     })
-    it.only("Create gradebook, title 1 character", ()=>{
+    it("Create gradebook, title 1 character", ()=>{
         cy.get(Locators.CreateGradebook.gradebook_title).type(wrongTitle)
         cy.get(Locators.CreateGradebook.professor_select).select(professor_name)
         cy.get(Locators.CreateGradebook.submit_gradebook).click()

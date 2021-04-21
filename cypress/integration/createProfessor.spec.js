@@ -1,11 +1,12 @@
 const Locators = require("../fixtures/Locators.json")
+import faker from "faker"
 
 describe ("Create professor", ()=>{
 
     let email = "kalabaster@live.com"
     let password = "123456789"
-    let professorName = "zivojin"
-    let professorLastName = "misic"
+    let professorName = faker.name.firstName()
+    let professorLastName = faker.name.lastName()
     let imgurl = "https://images-na.ssl-images-amazon.com/images/I/61xsFKE4QEL._AC_SL1000_.jpg"
     let imgurl2 = "https://i.pinimg.com/474x/1a/31/59/1a3159e4c899e2fd71b5fe58d0c2b5a9.jpg"
 
@@ -34,7 +35,7 @@ describe ("Create professor", ()=>{
             expect($input[0].validationMessage).to.eq("Please fill out this field.")
         })
     })
-    it("Create professor without last name", ()=>{
+    it.only("Create professor without last name", ()=>{
         cy.get(Locators.Professor.professor_name).type(professorName)
         cy.get(Locators.Professor.add_image).eq(0).click()
         cy.get(Locators.Professor.professor_img_url).type(imgurl)

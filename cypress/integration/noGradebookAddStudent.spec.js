@@ -5,7 +5,7 @@ describe ("Adding student", ()=>{
     let email = "kalabaster@live.com"
     let password = "123456789"
 
-    it.only("Add student with no gradebook created", ()=>{
+    it("Add student with no gradebook created", ()=>{
         cy.Login(email,password)
         cy.get(Locators.Header.myGradebook).eq(1).click()
         cy.wait(500)

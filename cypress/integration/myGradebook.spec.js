@@ -48,7 +48,7 @@ describe ("My gradebook testing", ()=>{
     it("Edit gradebook title", ()=>{
         cy.get(Locators.MyGradebook.edit_gradebook).eq(2).click()
         cy.get(Locators.CreateGradebook.gradebook_title).clear()
-        cy.wait(500)
+        cy.wait(700)
         cy.get(Locators.CreateGradebook.gradebook_title).type(edited_title)
         cy.get(Locators.CreateGradebook.submit_gradebook).click()
         cy.wait(500)

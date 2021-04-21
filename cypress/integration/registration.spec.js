@@ -4,8 +4,8 @@ import faker from "faker"
 describe ("Registration testing", ()=>{
     
     const email = faker.internet.email()
-    let lastName = "Doe"
-    let firstName = "John"
+    let lastName = faker.name.lastName()
+    let firstName = faker.name.firstName()
     let password = "123456789"
     let passwordConfirmation = "123456789"
     let wrongPasswordConfirmation = "marko123"
@@ -18,7 +18,7 @@ describe ("Registration testing", ()=>{
         cy.get(Locators.Header.Register).eq(1).click()
         cy.url().should("contain", "/register")
     })
-    it("Register user without first name", ()=>{
+    it.only("Register user without first name", ()=>{
         cy.get(Locators.Register.last_name).type(lastName)
         cy.get(Locators.Register.password).type(password)
         cy.get(Locators.Register.password_confirmation).type(passwordConfirmation)
@@ -29,7 +29,7 @@ describe ("Registration testing", ()=>{
             expect($input[0].validationMessage).to.eq("Please fill out this field.")
         })
     })
-    it("Register user without last name", ()=>{
+    it.only("Register user without last name", ()=>{
         cy.get(Locators.Register.first_name).type(firstName)
         cy.get(Locators.Register.password).type(password)
         cy.get(Locators.Register.password_confirmation).type(passwordConfirmation)
@@ -50,7 +50,7 @@ describe ("Registration testing", ()=>{
             expect($input[0].validationMessage).to.eq("Please fill out this field.")
         })
     })
-    it.only('Password confirmation does not match', () => {
+    it('Password confirmation does not match', () => {
         const stub = cy.stub()
         cy.on('window:alert', stub)
         cy.get(Locators.Register.first_name).type(firstName)

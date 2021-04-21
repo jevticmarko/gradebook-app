@@ -11,7 +11,7 @@ describe ("Testing login functionality", ()=>{
         cy.visit("https://gradebook.vivifyideas.com/")
         cy.url().should("contain", "https://gradebook.vivifyideas.com/")
     })
-    it("Successful login", ()=>{
+    it.only("Successful login", ()=>{
         cy.get(Locators.Login.Email).eq(0).type(email)
         cy.get(Locators.Login.Password).eq(1).type(password)
         cy.get(Locators.Login.Submit).click()

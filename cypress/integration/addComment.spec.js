@@ -1,4 +1,5 @@
 const Locators = require("../fixtures/Locators.json")
+
 describe ("Add comment functionality", ()=>{
 
     let email = "kalabaster@live.com"
@@ -37,12 +38,13 @@ describe ("Add comment functionality", ()=>{
         cy.get(Locators.Comment.submit_comment).eq(1).click()
         cy.get(Locators.Comment.alertMessage).should("contain", "Message: You dont have your diary. Please first set your own diary")
     })
-    it("Add comment 256 characters long", ()=>{
+    it.only("Add comment 256 characters long", ()=>{
         cy.server()
-        cy.route("POST", "https://gradebook-api.vivifyideas.com/api/diaries/265/comments", 500).as("post") //nisam uspeo da promenim gradebookID, osim da menjam stalno manuelno  
+        cy.route("POST", "https://gradebook-api.vivifyideas.com/api/diaries/1137/comments", 500).as("post") //nisam uspeo da promenim gradebookID, osim da menjam stalno manuelno  
         cy.get(Locators.Comment.textarea).type(longComment)
         cy.get(Locators.Comment.submit_comment).eq(3).click()      
         cy.get('@post').should('have.property', 'status', 200)
+
     })
     it("Add multiple comments", ()=>{
         cy.Add_comment(comment)

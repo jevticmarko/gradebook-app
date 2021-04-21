@@ -20,11 +20,11 @@ describe ("Gradebook filter", ()=>{
         cy.get(Locators.Filter.search).eq(0).click()
         cy.get("tbody").should("not.be.visible")
     })
-    it.only("Pagination gradebooks, first page", ()=>{
+    it("Pagination gradebooks, first page", ()=>{
         cy.get(Locators.Filter.previous_button).eq(1).should("be.disabled")
         cy.get(Locators.Filter.next_button).eq(2).should("not.be.disabled")     
     })
-    it.only("Pagination gradebooks, second page", ()=>{
+    it("Pagination gradebooks, second page", ()=>{
         cy.get(Locators.Filter.next_button).eq(2).click()
         cy.get(Locators.Filter.previous_button).eq(1).should("not.be.disabled")
         cy.get(Locators.Filter.next_button).eq(2).should("not.be.disabled")

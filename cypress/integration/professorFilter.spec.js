@@ -11,6 +11,7 @@ describe("Professors filter", ()=>{
     beforeEach("Visit app and login", ()=>{
         cy.Login(email, password)
     })
+    
     it("Visit professors link", ()=>{
         cy.get(Locators.Header.Professors).eq(3).click()
         cy.get(Locators.Header.All_professors).eq(0).click()
